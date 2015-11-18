@@ -5,7 +5,8 @@ platform :ios, '8.0'
 
 target 'iOSTravisSample' do
 
-pod 'AFNetworking', '~> 2.0'
+#pod 'AFNetworking', '~> 2.0'
+pod 'AFNetworking', '2.5.4'
 pod 'SAMCategories'
 #pod 'Nimbus/AttributedLabel', '~> 1.0'
 pod 'JSONModel'
