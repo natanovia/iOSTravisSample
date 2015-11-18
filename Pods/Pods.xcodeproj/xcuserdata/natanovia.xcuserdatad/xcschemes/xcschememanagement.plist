@@ -4,22 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme_^#shared#^_</key>
+		<key>AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JSONModel.xcscheme_^#shared#^_</key>
+		<key>JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-iOSTravisSample.xcscheme_^#shared#^_</key>
+		<key>Pods-iOSTravisSample.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SAMCategories.xcscheme_^#shared#^_</key>
+		<key>SAMCategories.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
