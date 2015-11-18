@@ -1,0 +1,4 @@
+language: objective-c
+script:
+- xctool -workspace iOSTravisSample.xcworkspace -scheme iOSTravisSample -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xctool test -workspace iOSTravisSample.xcworkspace -scheme iOSTravisSampleTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO

@@ -20,6 +20,7 @@
 		8865A85E1BFC6C4300A180C8 /* ImdbMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 8865A85D1BFC6C4300A180C8 /* ImdbMovie.m */; };
 		8865A8611BFC6CAB00A180C8 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8865A8601BFC6CAB00A180C8 /* ImageModel.m */; };
 		8865A8641BFC700000A180C8 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8865A8631BFC700000A180C8 /* APIClient.m */; };
+		8865A8681BFC8C9C00A180C8 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8865A8671BFC8C9C00A180C8 /* .travis.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		8865A8601BFC6CAB00A180C8 /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
 		8865A8621BFC700000A180C8 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		8865A8631BFC700000A180C8 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		8865A8671BFC8C9C00A180C8 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		D2C37073518FBB6EA60FC387 /* Pods-iOSTravisSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTravisSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTravisSample/Pods-iOSTravisSample.debug.xcconfig"; sourceTree = "<group>"; };
 		E98630D2E1859AEA8A28E9FB /* libPods-iOSTravisSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSTravisSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 		8865A81B1BFC664C00A180C8 = {
 			isa = PBXGroup;
 			children = (
+				8865A8671BFC8C9C00A180C8 /* .travis.yml */,
 				8865A8261BFC664C00A180C8 /* iOSTravisSample */,
 				8865A8401BFC664C00A180C8 /* iOSTravisSampleTests */,
 				8865A8251BFC664C00A180C8 /* Products */,
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8865A8681BFC8C9C00A180C8 /* .travis.yml in Resources */,
 				8865A8581BFC68CA00A180C8 /* .gitignore in Resources */,
 				8865A8371BFC664C00A180C8 /* LaunchScreen.storyboard in Resources */,
 				8865A8341BFC664C00A180C8 /* Assets.xcassets in Resources */,
