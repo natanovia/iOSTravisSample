@@ -15,12 +15,12 @@
 		8865A8341BFC664C00A180C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8865A8331BFC664C00A180C8 /* Assets.xcassets */; };
 		8865A8371BFC664C00A180C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8865A8351BFC664C00A180C8 /* LaunchScreen.storyboard */; };
 		8865A8421BFC664C00A180C8 /* iOSTravisSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8865A8411BFC664C00A180C8 /* iOSTravisSampleTests.m */; };
-		8865A8581BFC68CA00A180C8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8865A8571BFC68CA00A180C8 /* .gitignore */; };
 		8865A85B1BFC6C0500A180C8 /* ImdbMovies.m in Sources */ = {isa = PBXBuildFile; fileRef = 8865A85A1BFC6C0500A180C8 /* ImdbMovies.m */; };
 		8865A85E1BFC6C4300A180C8 /* ImdbMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 8865A85D1BFC6C4300A180C8 /* ImdbMovie.m */; };
 		8865A8611BFC6CAB00A180C8 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8865A8601BFC6CAB00A180C8 /* ImageModel.m */; };
 		8865A8641BFC700000A180C8 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8865A8631BFC700000A180C8 /* APIClient.m */; };
 		8865A8681BFC8C9C00A180C8 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8865A8671BFC8C9C00A180C8 /* .travis.yml */; };
+		8865A86A1BFC8F3500A180C8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8865A8691BFC8F3500A180C8 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,6 @@
 		8865A83D1BFC664C00A180C8 /* iOSTravisSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTravisSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8865A8411BFC664C00A180C8 /* iOSTravisSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSTravisSampleTests.m; sourceTree = "<group>"; };
 		8865A8431BFC664C00A180C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8865A8571BFC68CA00A180C8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8865A8591BFC6C0500A180C8 /* ImdbMovies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImdbMovies.h; sourceTree = "<group>"; };
 		8865A85A1BFC6C0500A180C8 /* ImdbMovies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImdbMovies.m; sourceTree = "<group>"; };
 		8865A85C1BFC6C4300A180C8 /* ImdbMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImdbMovie.h; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		8865A8621BFC700000A180C8 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		8865A8631BFC700000A180C8 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		8865A8671BFC8C9C00A180C8 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		8865A8691BFC8F3500A180C8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D2C37073518FBB6EA60FC387 /* Pods-iOSTravisSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTravisSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTravisSample/Pods-iOSTravisSample.debug.xcconfig"; sourceTree = "<group>"; };
 		E98630D2E1859AEA8A28E9FB /* libPods-iOSTravisSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSTravisSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +84,7 @@
 		8865A81B1BFC664C00A180C8 = {
 			isa = PBXGroup;
 			children = (
+				8865A8691BFC8F3500A180C8 /* .gitignore */,
 				8865A8671BFC8C9C00A180C8 /* .travis.yml */,
 				8865A8261BFC664C00A180C8 /* iOSTravisSample */,
 				8865A8401BFC664C00A180C8 /* iOSTravisSampleTests */,
@@ -114,7 +115,6 @@
 				8865A8351BFC664C00A180C8 /* LaunchScreen.storyboard */,
 				8865A8381BFC664C00A180C8 /* Info.plist */,
 				8865A8271BFC664C00A180C8 /* Supporting Files */,
-				8865A8571BFC68CA00A180C8 /* .gitignore */,
 				8865A8591BFC6C0500A180C8 /* ImdbMovies.h */,
 				8865A85A1BFC6C0500A180C8 /* ImdbMovies.m */,
 				8865A85C1BFC6C4300A180C8 /* ImdbMovie.h */,
@@ -246,8 +246,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8865A86A1BFC8F3500A180C8 /* .gitignore in Resources */,
 				8865A8681BFC8C9C00A180C8 /* .travis.yml in Resources */,
-				8865A8581BFC68CA00A180C8 /* .gitignore in Resources */,
 				8865A8371BFC664C00A180C8 /* LaunchScreen.storyboard in Resources */,
 				8865A8341BFC664C00A180C8 /* Assets.xcassets in Resources */,
 				8865A8321BFC664C00A180C8 /* Main.storyboard in Resources */,
