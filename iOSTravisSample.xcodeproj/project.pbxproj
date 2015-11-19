@@ -58,6 +58,7 @@
 		8865A8631BFC700000A180C8 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		8865A8671BFC8C9C00A180C8 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		8865A8691BFC8F3500A180C8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		88D254851BFDE32000009003 /* LOG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOG.h; sourceTree = "<group>"; };
 		D2C37073518FBB6EA60FC387 /* Pods-iOSTravisSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTravisSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTravisSample/Pods-iOSTravisSample.debug.xcconfig"; sourceTree = "<group>"; };
 		E98630D2E1859AEA8A28E9FB /* libPods-iOSTravisSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSTravisSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,6 +124,7 @@
 				8865A8601BFC6CAB00A180C8 /* ImageModel.m */,
 				8865A8621BFC700000A180C8 /* APIClient.h */,
 				8865A8631BFC700000A180C8 /* APIClient.m */,
+				88D254851BFDE32000009003 /* LOG.h */,
 			);
 			path = iOSTravisSample;
 			sourceTree = "<group>";

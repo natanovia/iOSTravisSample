@@ -11,6 +11,7 @@ pod 'SAMCategories'
 pod 'JSONModel'
 pod 'MBProgressHUD', '~> 0.9.1'
 pod 'PonyDebugger', '~> 0.4.3'
+pod 'CocoaLumberjack'
 
 end
 

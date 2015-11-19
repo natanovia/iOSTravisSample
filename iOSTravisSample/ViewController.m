@@ -13,6 +13,9 @@
 #import <AFNetworking/UIKit+AFNetworking.h>
 #import <SAMCategories/UIScreen+SAMAdditions.h>
 #import <MBProgressHUD/MBProgressHUD.h>
+#import "LOG.h"
+
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 @interface ViewController ()
 
@@ -31,7 +34,7 @@
     APIClient *client = [APIClient sharedClient];
     [client getTop250:^(NSURLSessionDataTask *task, id responseObject) {
         
-        NSLog(@"Success -- %@", responseObject);
+        LOGD(@"Success -- %@", responseObject);
         
         [self parseData:responseObject];
         
@@ -39,7 +42,7 @@
         
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         
-        NSLog(@"Failure -- %@", error);
+        LOGD(@"Failure -- %@", error);
     }];
 }
 
@@ -51,40 +54,40 @@
 - (void) parseData:(id) data {
     
     if ([data isKindOfClass:[NSData class]]) {
-        NSLog(@"NSData");
+        LOGD(@"NSData");
     }
     
     if ([data isKindOfClass:[NSDictionary class]]) {
-        NSLog(@"NSDictionary");
+        LOGD(@"NSDictionary");
     }
     
     if ([data isKindOfClass:[NSArray class]]) {
-        NSLog(@"NSArray");
+        LOGD(@"NSArray");
     }
     
     //    NSDictionary* dict = data;
     //    NSDictionary* movies = [[[dict valueForKey:@"data"] valueForKey:@"list"] valueForKey:@"list"];
-    //    NSLog(@"count -- %lu", [movies count]);
+    //    LOGD(@"count -- %lu", [movies count]);
     //    for ( NSDictionary* movie in movies ) {
     //
-    //        NSLog(@"title -- %@", [movie valueForKey:@"title"]);
-    //        NSLog(@"year -- %@", [movie valueForKey:@"year"]);
-    //        NSLog(@"rating -- %@", [movie valueForKey:@"rating"]);
-    //        NSLog(@"numVotes -- %@", [movie valueForKey:@"num_votes"]);
-    //        NSLog(@"imageUrl -- %@", [[movie valueForKey:@"image"] valueForKey:@"url"]);
+    //        LOGD(@"title -- %@", [movie valueForKey:@"title"]);
+    //        LOGD(@"year -- %@", [movie valueForKey:@"year"]);
+    //        LOGD(@"rating -- %@", [movie valueForKey:@"rating"]);
+    //        LOGD(@"numVotes -- %@", [movie valueForKey:@"num_votes"]);
+    //        LOGD(@"imageUrl -- %@", [[movie valueForKey:@"image"] valueForKey:@"url"]);
     //    }
     
     self.movies = [[ImdbMovies alloc] initWithDictionary:data error:nil];
     NSInteger count = [[self.movies items] count];
-    NSLog(@"count -- %ld", (long)count);
+    LOGD(@"count -- %ld", (long)count);
     
     for ( ImdbMovie* movie in [self.movies items] ) {
         
-        NSLog(@"title -- %@", [movie title]);
-        NSLog(@"year -- %@", [movie year]);
-        NSLog(@"rating -- %f", [movie rating]);
-        NSLog(@"numVotes -- %d", [movie num_votes]);
-        NSLog(@"imageUrl -- %@", [[movie image] url]);
+        LOGD(@"title -- %@", [movie title]);
+        LOGD(@"year -- %@", [movie year]);
+        LOGD(@"rating -- %f", [movie rating]);
+        LOGD(@"numVotes -- %d", [movie num_votes]);
+        LOGD(@"imageUrl -- %@", [[movie image] url]);
     }
     
     NSInteger index = 0;
@@ -154,7 +157,7 @@
     // Call loadMovie for the new page
     ImdbMovie *movie = [[self.movies items] objectAtIndex:page];
     [self loadMovie :movie :page];
-    NSLog(@"pageChanged -- page:%ld", (long)page);
+    LOGD(@"pageChanged -- page:%ld", (long)page);
     
     // Scroll to the new page
     CGRect frame = self.showsScrollView.frame;
@@ -195,7 +198,7 @@
     // Set the page control page display
     self.showsPageControl.currentPage = page;
     
-    NSLog(@"scrollViewDidScroll -- page:%ld", (long)page);
+    LOGD(@"scrollViewDidScroll -- page:%ld", (long)page);
     
     // Load the page
     ImdbMovie *movie = [[self.movies items] objectAtIndex:page];

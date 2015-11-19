@@ -7,10 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "LOG.h"
 
 #if DEBUG
 #import <PonyDebugger/PonyDebugger.h>
 #endif
+
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 @interface AppDelegate ()
 
@@ -22,6 +25,38 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    
+    // Configure CocoaLumberjack
+    // since the verbose log level was undefined, we need to specify the log level for every logger
+    [DDLog addLogger:[DDASLLogger sharedInstance] withLevel:ddLogLevel]; // TTY = Xcode console
+    [DDLog addLogger:[DDTTYLogger sharedInstance] withLevel:ddLogLevel]; // ASL = Apple System Logs
+//    // Initialize File Logger
+//    DDFileLogger *fileLogger = [[DDFileLogger alloc] init]; // File Logger
+//    fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
+//    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+//    [DDLog addLogger:fileLogger];
+    // Enable Colors
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor orangeColor]
+                                  backgroundColor:nil
+                                  forFlag:DDLogFlagInfo];
+    
+    LOGV(@"Verbose");
+    LOGI(@"Info");
+    LOGD(@"Debug");
+    LOGW(@"Warn");
+    LOGE(@"Error");
+    
+    char *xcode_colors = getenv("XcodeColors");
+    if (xcode_colors) {
+        if (strcmp(xcode_colors, "YES") == 0) {
+            LOGD(@"XcodeColors enabled");
+        } else {
+            LOGD(@"XcodeColors disabled");
+        }
+    } else {
+        LOGD(@"XcodeColors not detected");
+    }
     
 #if DEBUG
     
