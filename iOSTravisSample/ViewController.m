@@ -76,7 +76,7 @@
     
     self.movies = [[ImdbMovies alloc] initWithDictionary:data error:nil];
     NSInteger count = [[self.movies items] count];
-    NSLog(@"count -- %lu", count);
+    NSLog(@"count -- %ld", (long)count);
     
     for ( ImdbMovie* movie in [self.movies items] ) {
         
@@ -154,7 +154,7 @@
     // Call loadMovie for the new page
     ImdbMovie *movie = [[self.movies items] objectAtIndex:page];
     [self loadMovie :movie :page];
-    NSLog(@"pageChanged -- page:%ld", page);
+    NSLog(@"pageChanged -- page:%ld", (long)page);
     
     // Scroll to the new page
     CGRect frame = self.showsScrollView.frame;
