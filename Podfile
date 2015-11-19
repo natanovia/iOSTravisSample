@@ -10,6 +10,7 @@ pod 'SAMCategories'
 #pod 'Nimbus/AttributedLabel', '~> 1.0'
 pod 'JSONModel'
 pod 'MBProgressHUD', '~> 0.9.1'
+pod 'PonyDebugger', '~> 0.4.3'
 
 end
 

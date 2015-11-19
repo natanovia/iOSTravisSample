@@ -22,18 +22,24 @@ PODS:
     - AFNetworking/NSURLSession
   - JSONModel (1.1.2)
   - MBProgressHUD (0.9.1)
+  - PonyDebugger (0.4.5):
+    - SocketRocket
   - SAMCategories (0.5.2)
+  - SocketRocket (0.4.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - JSONModel
   - MBProgressHUD (~> 0.9.1)
+  - PonyDebugger (~> 0.4.3)
   - SAMCategories
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  PonyDebugger: 1c60f7c876bdb6a8b6bf0f0269087f8a234fafa7
   SAMCategories: bf8287f7961a0b343168d1fee16338dc1626ea39
+  SocketRocket: ffe08119b00ef982f6c37052a4705a057c8494ad
 
 COCOAPODS: 0.39.0

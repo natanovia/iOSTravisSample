@@ -24,7 +24,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PonyDebugger.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SAMCategories.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SocketRocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,7 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0833C3AAAED698CC03BCAA2427382E92</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>09FA060F1A0492FB25232F489AC4E573</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>37A675CB4568293F6170BDCDBF03BBA3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,12 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4CE5FB4EF73455F6FB690B43E3A6E651</key>
+		<key>89717FA52C1F253776865E77E10549EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BD137C10E6432C9DA5565F997FE391DD</key>
+		<key>BF734A8661B01F0890A03BAD3DB86750</key>
 		<dict>
 			<key>primary</key>
 			<true/>
