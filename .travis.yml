@@ -1,5 +1,7 @@
 language: objective-c
-cache: bundler
+cache:
+- bundler
+- cocoapods
 osx_image: xcode7.1
 sudo: false
 env:
