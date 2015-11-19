@@ -195,7 +195,7 @@
     // Set the page control page display
     self.showsPageControl.currentPage = page;
     
-    NSLog(@"scrollViewDidScroll -- page:%ld", page);
+    NSLog(@"scrollViewDidScroll -- page:%ld", (long)page);
     
     // Load the page
     ImdbMovie *movie = [[self.movies items] objectAtIndex:page];
