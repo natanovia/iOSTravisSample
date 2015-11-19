@@ -12,6 +12,7 @@
 #import "ImdbMovies.h"
 #import <AFNetworking/UIKit+AFNetworking.h>
 #import <SAMCategories/UIScreen+SAMAdditions.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface ViewController ()
 
@@ -23,6 +24,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:NO];
+    hud.mode = MBProgressHUDModeAnnularDeterminate;
+    hud.labelText = @"Loading";
+    
     APIClient *client = [APIClient sharedClient];
     [client getTop250:^(NSURLSessionDataTask *task, id responseObject) {
         
@@ -31,6 +36,8 @@
         [self parseData:responseObject];
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         
         NSLog(@"Failure -- %@", error);
     }];
@@ -131,9 +138,12 @@
     // Asynchronously load the image
     [posterImage setImageWithURL:[NSURL URLWithString:posterUrl]];// placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     [self.showsScrollView addSubview:posterImage];
+    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 - (IBAction)pageChanged:(id) sender {
+    
     // Set flag
     self.pageControlUsed = YES;
     
@@ -152,6 +162,7 @@
     frame.origin.y = 0;
     [UIView animateWithDuration:0.5f animations:^{
         [self.showsScrollView scrollRectToVisible:frame animated:NO];
+        
     } completion:^(BOOL finished) {
         self.pageControlUsed = NO;
     }];
@@ -177,8 +188,7 @@
     [sender setContentOffset:scrollViewOffset];
     
     // Do not do anything if we're trying to go beyond the available page range
-    if ( page == self.previousPage || page < 0 || page >= self.showsPageControl.numberOfPages ) {
-        return;
+    if ( page == self.previousPage || page < 0 || page >= self.showsPageControl.numberOfPages ) {        return;
     }
     
     self.previousPage = page;

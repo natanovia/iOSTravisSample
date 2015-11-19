@@ -21,16 +21,19 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - JSONModel (1.1.2)
+  - MBProgressHUD (0.9.1)
   - SAMCategories (0.5.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - JSONModel
+  - MBProgressHUD (~> 0.9.1)
   - SAMCategories
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   SAMCategories: bf8287f7961a0b343168d1fee16338dc1626ea39
 
 COCOAPODS: 0.39.0
